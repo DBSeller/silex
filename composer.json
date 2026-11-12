@@ -14,6 +14,10 @@
         {
             "name": "Igor Wiedler",
             "email": "igor@wiedler.ch"
+        },
+        {
+            "name": "Gabriel Morgado",
+            "email": "gabriel.morgado@dbseller.com.br"
         }
     ],
     "require": {
@@ -71,5 +75,6 @@
         "branch-alias": {
             "dev-master": "2.3.x-dev"
         }
-    }
+    },
+    "version": "2.3.1"
 }
