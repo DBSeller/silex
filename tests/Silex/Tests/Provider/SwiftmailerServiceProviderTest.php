@@ -109,7 +109,7 @@ class SwiftmailerServiceProviderTest extends TestCase
         $messages = $app['swiftmailer.spool']->getMessages();
         $this->assertCount(1, $messages);
 
-        list($message) = $messages;
+        [$message] = $messages;
         $this->assertEquals('foo@example.com', $message->getReturnPath());
     }
 

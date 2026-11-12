@@ -30,7 +30,7 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
             return false;
         }
 
-        list($username, $secret) = explode(':', $token);
+        [$username, $secret] = explode(':', $token);
 
         return [
             'username' => $username,

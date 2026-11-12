@@ -274,7 +274,7 @@ class SecurityServiceProvider implements ServiceProviderInterface, EventListener
 
                         $options['stateless'] = $stateless;
 
-                        list($providerId, $listenerId, $entryPointId, $position) = $app['security.authentication_listener.factory.'.$type]($name, $options);
+                        [$providerId, $listenerId, $entryPointId, $position] = $app['security.authentication_listener.factory.'.$type]($name, $options);
 
                         if (null !== $entryPointId) {
                             $entryPoint = $entryPointId;
@@ -687,7 +687,7 @@ class SecurityServiceProvider implements ServiceProviderInterface, EventListener
     {
         $controllers = $app['controllers_factory'];
         foreach ($this->fakeRoutes as $route) {
-            list($method, $pattern, $name) = $route;
+            [$method, $pattern, $name] = $route;
 
             $controllers->$method($pattern)->run(null)->bind($name);
         }
